@@ -1,0 +1,4 @@
+interface:
+  display_name: "Advocacia Previdenci�ria Barkoski"
+  short_description: "An�lise previdenci�ria rastre�vel no Codex"
+  default_prompt: "Use $advocacia-previdenciaria-barkoski-codex para analisar este caso previdenci�rio com rastreabilidade documental e riscos."
