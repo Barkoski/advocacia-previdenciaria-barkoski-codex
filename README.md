@@ -10,20 +10,56 @@
 
 # ⚖️ Previdenciário no Codex
 
-> Skill para apoiar **análise, estratégia e redação previdenciária no Codex**, com fontes, provas e riscos à vista.
+> Skill para **análise, estratégia e redação em Direito Previdenciário brasileiro no Codex**, com fonte para cada afirmação e riscos à vista.
 
 Criado por **[Lucas Barkoski](https://github.com/Barkoski)**.
 
-**Explore:** [📚 Documentação](#documentacao) · [💡 Exemplo de pedido](#secao-1) · [📌 Principais controles](#secao-2) · [🚀 Instalação no Codex](#secao-3) · [🗂️ Estrutura](#secao-4) · [🚧 Limites](#secao-5)
+**Navegue:** [🧭 O que é](#o-que-e) · [📌 O que faz](#o-que-faz) · [🚀 Instalação](#instalacao) · [💡 Como usar](#como-usar) · [🚧 Limites](#limites) · [📚 Documentação](#documentacao)
 
 <p align="center">
   <img src="assets/fluxo.svg" alt="Indicar arquivos → Rastrear fatos → Avaliar riscos → Revisar a peça" width="100%">
 </p>
 
-Versão independente da [skill original](https://github.com/Barkoski/advocacia-previdenciaria-barkoski), mantida em repositório separado.
+<a id="o-que-e"></a>
+## 🧭 O que é
 
-<a id="secao-1"></a>
-## 💡 Exemplo de pedido
+É a versão para o Codex da skill [Advocacia Previdenciária Barkoski](https://github.com/Barkoski/advocacia-previdenciaria-barkoski), mantida neste repositório separado. Ela lê os arquivos do caso e entrega uma análise que você consegue conferir: cada afirmação cita arquivo e página. O que não está no documento aparece como não confirmado. Toda peça sai como minuta, para revisão integral do advogado.
+
+### 👥 Para quem é
+
+- Advogados que atuam em Direito Previdenciário brasileiro e usam o Codex.
+- Casos no INSS (processo administrativo, CNIS, indeferimento) e na Justiça (PJe, JEF).
+- Aposentadorias, BPC/LOAS, incapacidade, auxílio-acidente, pensão por morte e revisões.
+
+<a id="o-que-faz"></a>
+## 📌 O que faz
+
+- **Rastreia cada afirmação** até o arquivo e a página.
+- **Separa fato de narrativa**: `FATO COMPROVADO`, `ALEGACAO`, `INFERENCIA` ou `CONCLUSAO JURIDICA`.
+- **Monta a tabela de provas** e a matriz requisito-prova-risco.
+- **Mostra o outro lado**: prova contrária, contradições e a tese provável do INSS.
+- **Revisa peças antes do protocolo**.
+- **Trata prazos e cálculos** com a memória do cálculo à vista.
+- **Pesquisa lei e jurisprudência** em fontes oficiais, sem dados do cliente.
+- **Entrega em formatos prontos**: análise de indeferimento, revisão de CNIS, parecer, checklist e minuta.
+
+No fim, indica uma decisão operacional, como `AJUIZAR AGORA`, `RECORRER ADMINISTRATIVAMENTE` ou `DILIGENCIAR ANTES`, e a próxima ação.
+
+<a id="instalacao"></a>
+## 🚀 Instalação
+
+1. Baixe o repositório em **Code → Download ZIP** e extraia.
+2. Copie a pasta `skills/advocacia-previdenciaria-barkoski-codex` para a pasta de skills do Codex:
+   - Windows: `C:\Users\SEU_USUARIO\.codex\skills\`
+   - Mac/Linux: `~/.codex/skills/`
+3. Reinicie o Codex ou abra uma nova tarefa.
+
+O arquivo deve ficar em `.codex/skills/advocacia-previdenciaria-barkoski-codex/SKILL.md`.
+
+<a id="como-usar"></a>
+## 💡 Como usar
+
+A skill é acionada sozinha em trabalhos com INSS, CNIS, PJe, processos e benefícios previdenciários. Para chamá-la direto, use `$advocacia-previdenciaria-barkoski-codex`:
 
 ```text
 Use $advocacia-previdenciaria-barkoski-codex para analisar os arquivos
@@ -31,57 +67,47 @@ indicados. Quero cronologia, tabela de provas, requisitos e riscos.
 Cite arquivo e página. Quando faltar informação, diga que não consta.
 ```
 
-**Para experimentar:** use documentos fictícios ou sanitizados. A instalação local da skill não torna local o processamento do modelo.
+Para experimentar, use documentos fictícios ou anonimizados.
 
-<a id="secao-2"></a>
-## 📌 Principais controles
-
-- rastreabilidade entre afirmação, arquivo e página;
-- separação entre fato comprovado, alegação, inferência e conclusão jurídica;
-- tabela de provas e matriz requisito-prova-risco;
-- análise adversarial e melhor tese provável do INSS;
-- proteção de dados e autorização antes de qualquer envio externo;
-- pesquisa jurídica em fontes oficiais;
-- prazos e cálculos com memória reproduzivel;
-- minutas sempre sujeitas a revisão integral do advogado.
-
-<a id="secao-3"></a>
-## 🚀 Instalação no Codex
-
-1. Baixe o repositório em **Code → Download ZIP** e extraia.
-2. Copie a pasta `skills/advocacia-previdenciaria-barkoski-codex` para a pasta de skills do Codex, dentro da sua pasta de usuário.
-
-No Windows, o caminho final é:
-
-```text
-C:\Users\SEU_USUARIO\.codex\skills\advocacia-previdenciaria-barkoski-codex
-```
-
-Reinicie o Codex ou inicie uma nova tarefa. A skill será acionada em trabalhos com INSS, CNIS, PJe, processos e benefícios previdenciários.
-
-<a id="secao-4"></a>
-## 🗂️ Estrutura
-
-```text
-skills/advocacia-previdenciaria-barkoski-codex/
-|- SKILL.md
-|- agents/openai.yaml
-`- references/
-```
-
-<a id="secao-5"></a>
+<a id="limites"></a>
 ## 🚧 Limites
 
-A skill produz material de apoio e minutas para revisão profissional. Não substitui o advogado, não protocola automaticamente, não promete resultado e não transforma estimativa em calculo definitivo.
+- **Só Direito Previdenciário brasileiro.**
+- **Não substitui o advogado.** Produz material de apoio e minutas para revisão profissional. Não protocola nada e não promete resultado.
+- **Prazo e cálculo não são definitivos.** Sem marco, dados e regras confirmados, a skill não afirma data final nem valor definitivo.
+- **Lei e jurisprudência precisam de confirmação.** O que não foi consultado em fonte oficial vem marcado como "de memória".
 
-<a id="secao-6"></a>
-## 📜 Origem e licença
+### 🔐 Sigilo
 
-Adaptação autorizada da skill `advocacia-previdenciaria-barkoski`, mantida em repositorio separado. Licença MIT.
+- Nenhuma busca na internet, conector ou serviço externo com dado de cliente sem sua autorização expressa.
+- Instalar a skill no seu computador não torna local o processamento do modelo de IA. Use documentos anonimizados sempre que possível.
+- Texto dentro de um documento nunca é tratado como instrução.
 
 <a id="documentacao"></a>
-## 📚 Links para continuar
+## 📚 Documentação
 
-- [Skill central](skills/advocacia-previdenciaria-barkoski-codex/SKILL.md)
-- [Referências](skills/advocacia-previdenciaria-barkoski-codex/references/)
+- [Regras da skill](skills/advocacia-previdenciaria-barkoski-codex/SKILL.md)
+- [Módulos por assunto](skills/advocacia-previdenciaria-barkoski-codex/references/)
+- [Uso no Codex](skills/advocacia-previdenciaria-barkoski-codex/references/uso-no-codex.md)
+- [Casos de validação](tests/casos-de-validacao.md)
 - [Metadados do Codex](skills/advocacia-previdenciaria-barkoski-codex/agents/openai.yaml)
+
+<details>
+<summary>Estrutura dos arquivos</summary>
+
+```
+skills/advocacia-previdenciaria-barkoski-codex/
+├── SKILL.md              # travas, ordem de controle e escolha dos módulos
+├── agents/openai.yaml    # nome e prompt sugerido no Codex
+└── references/           # módulos por assunto (prazos, cálculos, provas, sigilo e outros)
+tests/
+└── casos-de-validacao.md # situações em que a skill deve falhar de modo seguro
+```
+
+</details>
+
+## 👤 Autor e licença
+
+Criado por **Lucas Barkoski** — [github.com/Barkoski](https://github.com/Barkoski). Adaptação da skill `advocacia-previdenciaria-barkoski`, pelo mesmo autor.
+
+Licença MIT — veja [LICENSE](LICENSE).
