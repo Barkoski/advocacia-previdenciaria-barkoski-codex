@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Previdenciário no Codex — Uma análise jurídica que permite voltar à fonte." width="100%">
+  <img src="assets/banner.svg" alt="Previdenciário no Codex: Uma análise jurídica que permite voltar à fonte." width="100%">
 </p>
 
 <p align="center">
@@ -108,6 +108,6 @@ tests/
 
 ## 👤 Autor e licença
 
-Criado por **Lucas Barkoski** — [github.com/Barkoski](https://github.com/Barkoski). Adaptação da skill `advocacia-previdenciaria-barkoski`, pelo mesmo autor.
+Criado por **Lucas Barkoski**, [github.com/Barkoski](https://github.com/Barkoski). Adaptação da skill `advocacia-previdenciaria-barkoski`, pelo mesmo autor.
 
-Licença MIT — veja [LICENSE](LICENSE).
+Licença MIT, veja [LICENSE](LICENSE).

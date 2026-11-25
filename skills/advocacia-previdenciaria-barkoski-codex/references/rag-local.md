@@ -17,7 +17,7 @@ Extrair texto de uma amostra de paginas e medir o volume por pagina:
 - **Pagina com poucas dezenas de caracteres, repetindo carimbo, ID de anexo, numeracao ou data de emissao**: e pagina de IMAGEM. O conteudo existe e nao foi lido.
 - **Pagina com centenas ou milhares de caracteres**: e nato-digital. O conteudo foi lido.
 
-Registrar essa separacao explicitamente. `AUSENCIA DE TEXTO EXTRAIDO NAO E AUSENCIA DE CONTEUDO` — jamais tratar pagina de imagem como pagina vazia, como documento inexistente ou como prova ausente.
+Registrar essa separacao explicitamente. `AUSENCIA DE TEXTO EXTRAIDO NAO E AUSENCIA DE CONTEUDO`, jamais tratar pagina de imagem como pagina vazia, como documento inexistente ou como prova ausente.
 
 Um mesmo PDF costuma ter os dois tipos: peticoes, despachos, telas de sistema e extratos de CNIS costumam ter texto; documentos do segurado (CTPS, notas fiscais, certidoes, laudos, fotos) costumam ser imagem.
 
